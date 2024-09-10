@@ -13,7 +13,7 @@ function auth(req, res, next) {
 
   try {
     const decoded = jwt.verify(token,   
-        process.env.TOKEN);
+        process.env.SECRET);
     req.user = decoded;
     next();
   } catch (err) {
