@@ -1,6 +1,6 @@
 const User = require('../Models/userSchema,');
 
-export default AuthGoogle = async (accessToken, refreshToken, profile, done) => {
+const AuthGoogle = async (accessToken, refreshToken, profile, done) => {
     try {
       // Verificar si el usuario ya existe en la base de datos
       let user = await User.findOne({ googleId: profile.id });
@@ -18,3 +18,5 @@ export default AuthGoogle = async (accessToken, refreshToken, profile, done) => 
       return done(err, null);
     }
 }
+
+module.exports = AuthGoogle;
