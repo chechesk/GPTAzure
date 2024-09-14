@@ -1,0 +1,11 @@
+# version: '3'
+
+services:
+  serviceapi:
+    container_name: serviceapi
+    restart: always
+    build: ./
+    ports:
+      - "3400:3400"
+
+ 
