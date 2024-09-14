@@ -2,7 +2,7 @@
 
 services:
   services:
-    container_name: services
+    # container_name: services
     restart: always
     build: ./
     ports:
