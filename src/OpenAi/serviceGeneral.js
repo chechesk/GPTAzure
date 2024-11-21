@@ -2,12 +2,13 @@ require('dotenv').config();
 const axios = require('axios');
 
 const ChatGptGeneral = async (req, res) => {
-  const { message } = req.body;
+  const { userId, message, response } = req.body;
 
   try {
     // Craft a comprehensive prompt based on the user's question (message)
     const prompt = message;
 
+    
     const response = await axios.post(
       process.env.AZURE_OPENAI_ENDPOINT,
       {
