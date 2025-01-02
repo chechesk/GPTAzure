@@ -1,7 +1,7 @@
 // routes/auth.js
 const express = require('express');
 const router = express.Router();
-const User = require('../../Models/userSchema,');
+const User = require('../Models/userSchema,');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs')
 const { SECRET } = process.env
